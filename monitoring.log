@@ -1,0 +1,40 @@
+2025-08-04 15:59:11,907 - INFO - Starting Advanced Concurrent Monitoring Tool...
+2025-08-04 15:59:11,909 - INFO - Total tasks created: 8
+2025-08-04 15:59:11,910 - INFO - [Reporter] Started. Waiting for results...
+2025-08-04 15:59:11,910 - DEBUG - Starting to check URL: https://www.python.org...
+2025-08-04 15:59:11,922 - DEBUG - Starting to check URL: https://www.google.com...
+2025-08-04 15:59:11,923 - DEBUG - Starting to check URL: https://www.github.com...
+2025-08-04 15:59:11,923 - DEBUG - Starting to run command: 'ip_config'...
+2025-08-04 15:59:12,004 - DEBUG - Starting to run command: 'task_list'...
+2025-08-04 15:59:12,075 - DEBUG - Starting to run command: 'directory_listing'...
+2025-08-04 15:59:12,147 - INFO - Command 'ip_config' executed successfully.
+2025-08-04 15:59:12,151 - INFO - [Reporter] Processing 1 new results.
+2025-08-04 15:59:12,151 - DEBUG - [Reporter] Got result: {"type": "command", "source": "ip_config", "output": "Windows IP Configuration\r\n\r\n\r\nEthernet adapter Ethernet:\r\n\r\n   Media State . . . . . . . . . . . : Media disconnected\r\n   Connection-specific DNS Suffix  . : \r\n\r\nEthernet adapter PdaNet Broadband Connection:\r\n\r\n   Media State . . . . . . . . . . . : Media disconnected\r\n   Connection-specific DNS Suffix  . : \r\n\r\nWireless LAN adapter Local Area Connection* 8:\r\n\r\n   Media State . . . . . . . . . . . : Media disconnected\r\n   Connection-specific DNS Suffix  . : \r\n\r\nWireless LAN adapter Local Area Connection* 11:\r\n\r\n   Media State . . . . . . . . . . . : Media disconnected\r\n   Connection-specific DNS Suffix  . : \r\n\r\nWireless LAN adapter WiFi:\r\n\r\n   Connection-specific DNS Suffix  . : \r\n   IPv6 Address. . . . . . . . . . . : 2a02:4540:e047:5ba2:49f7:a6a9:5f94:5efd\r\n   Temporary IPv6 Address. . . . . . : 2a02:4540:e047:5ba2:54e0:c158:bb42:ce1e\r\n   Link-local IPv6 Address . . . . . : fe80::14c4:ef8f:d276:a700%17\r\n   IPv4 Address. . . . . . . . . . . : 192.168.80.241\r\n   Subnet Mask . . . . . . . . . . . : 255.255.255.0\r\n   Default Gateway . . . . . . . . . : fe80::8889:5bc0:5e83:55c%17\r\n                                       192.168.80.118", "success": true}
+2025-08-04 15:59:12,155 - INFO - Command 'directory_listing' executed successfully.
+2025-08-04 15:59:12,159 - INFO - [Reporter] Processing 1 new results.
+2025-08-04 15:59:12,161 - DEBUG - [Reporter] Got result: {"type": "command", "source": "directory_listing", "output": "Volume in drive C has no label.\r\n Volume Serial Number is 2857-47E1\r\n\r\n Directory of C:\\Users\r\n\r\n07/17/2025  10:56 PM    <DIR>          .\r\n07/17/2025  10:56 PM    <DIR>          ..\r\n05/30/2025  02:51 AM    <DIR>          Admin\r\n07/17/2025  10:56 PM    <DIR>          AppData\r\n12/07/2019  06:33 AM    <DIR>          Public\r\n               0 File(s)              0 bytes\r\n               5 Dir(s)  15,450,914,816 bytes free", "success": true}
+2025-08-04 15:59:12,668 - INFO - Command 'task_list' executed successfully.
+2025-08-04 15:59:12,669 - INFO - [Reporter] Processing 1 new results.
+2025-08-04 15:59:12,670 - DEBUG - [Reporter] Got result: {"type": "command", "source": "task_list", "output": "python.exe                   12924 Console                    4     36,216 K", "success": true}
+2025-08-04 15:59:13,773 - INFO - URL Check Success: https://www.google.com - Status: 200
+2025-08-04 15:59:13,775 - DEBUG - Starting to check URL: http://httpbin.org/delay/5...
+2025-08-04 15:59:13,776 - INFO - [Reporter] Processing 1 new results.
+2025-08-04 15:59:13,778 - DEBUG - [Reporter] Got result: {"type": "url", "source": "https://www.google.com", "status": 200, "success": true}
+2025-08-04 15:59:13,858 - INFO - URL Check Success: https://www.python.org - Status: 200
+2025-08-04 15:59:13,860 - DEBUG - Starting to check URL: https://invalid-url-for-testing.xyz...
+2025-08-04 15:59:13,862 - INFO - [Reporter] Processing 1 new results.
+2025-08-04 15:59:13,867 - DEBUG - [Reporter] Got result: {"type": "url", "source": "https://www.python.org", "status": 200, "success": true}
+2025-08-04 15:59:13,872 - WARNING - URL Check Failed: https://invalid-url-for-testing.xyz - Error: Cannot connect to host invalid-url-for-testing.xyz:443 ssl:default [getaddrinfo failed]
+2025-08-04 15:59:13,878 - INFO - [Reporter] Processing 1 new results.
+2025-08-04 15:59:13,881 - DEBUG - [Reporter] Got result: {"type": "url", "source": "https://invalid-url-for-testing.xyz", "error": "Cannot connect to host invalid-url-for-testing.xyz:443 ssl:default [getaddrinfo failed]", "success": false}
+2025-08-04 15:59:14,005 - INFO - URL Check Success: https://www.github.com - Status: 200
+2025-08-04 15:59:14,009 - INFO - [Reporter] Processing 1 new results.
+2025-08-04 15:59:14,011 - DEBUG - [Reporter] Got result: {"type": "url", "source": "https://www.github.com", "status": 200, "success": true}
+2025-08-04 15:59:17,782 - WARNING - URL Check Failed: http://httpbin.org/delay/5 - Error: 
+2025-08-04 15:59:17,788 - INFO - Cancelling outstanding tasks...
+2025-08-04 15:59:17,789 - INFO - Cancelled 0 tasks.
+2025-08-04 15:59:17,793 - INFO - [Reporter] Processing 1 new results.
+2025-08-04 15:59:17,799 - DEBUG - [Reporter] Got result: {"type": "url", "source": "http://httpbin.org/delay/5", "error": "", "success": false}
+2025-08-04 15:59:17,800 - INFO - Main workload finished. Shutting down reporter...
+2025-08-04 15:59:17,803 - INFO - [Reporter] Shutting down.
+2025-08-04 15:59:17,806 - INFO - Monitoring finished in 5.90 seconds.
